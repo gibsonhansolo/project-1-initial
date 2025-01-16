@@ -55,8 +55,11 @@ public class Point {
     }
 
     public void rotate(double angle) {
-        this.x = this.x * Math.cos(angle) - this.y * Math.sin(angle);
-        this.y = this.y * Math.sin(angle) + this.y * Math.cos(angle);
+        double originalX = this.x;
+        double originalY = this.y;
+
+        this.x = originalX * Math.cos(angle) - originalY * Math.sin(angle);
+        this.y = originalX * Math.sin(angle) + originalY * Math.cos(angle);
     }
 
     @Override
